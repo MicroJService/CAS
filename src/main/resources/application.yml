@@ -1,0 +1,30 @@
+server:
+  port: 6080
+  ssl:
+    enabled: false
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cas
+    username: cas
+    password: 19890604
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+      implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+hibernate:
+  hibernate:
+    physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+cas:
+  service-registry:
+    jpa:
+      user: cas
+      password: 19890604
+      url: jdbc:mysql://localhost:3306/cas
+      driver-class: com.mysql.cj.jdbc.Driver
+      dialect: org.hibernate.dialect.MySQL8Dialect

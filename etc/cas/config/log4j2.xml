@@ -2,19 +2,19 @@
 <!-- Specify the refresh internal in seconds. -->
 <Configuration monitorInterval="5" packages="org.apereo.cas.logging">
     <Properties>
-        <Property name="baseDir">/var/log</Property>
+        <Property name="baseDir">/var/log/cas</Property>
 
-        <Property name="cas.log.level">info</Property>
-        <Property name="spring.webflow.log.level">warn</Property>
-        <Property name="spring.security.log.level">info</Property>
-        <Property name="spring.cloud.log.level">warn</Property>
-        <Property name="spring.boot.admin.log.level">debug</Property>
-        <Property name="spring.web.log.level">warn</Property>
-        <Property name="spring.boot.log.level">warn</Property>
-        <Property name="ldap.log.level">warn</Property>
-        <Property name="pac4j.log.level">warn</Property>
-        <Property name="opensaml.log.level">warn</Property>
-        <Property name="hazelcast.log.level">warn</Property>
+        <Property name="cas.log.level">TRACE</Property>
+        <Property name="spring.webflow.log.level">TRACE</Property>
+        <Property name="spring.security.log.level">TRACE</Property>
+        <Property name="spring.cloud.log.level">TRACE</Property>
+        <Property name="spring.boot.admin.log.level">TRACE</Property>
+        <Property name="spring.web.log.level">TRACE</Property>
+        <Property name="spring.boot.log.level">TRACE</Property>
+        <Property name="ldap.log.level">TRACE</Property>
+        <Property name="pac4j.log.level">TRACE</Property>
+        <Property name="opensaml.log.level">TRACE</Property>
+        <Property name="hazelcast.log.level">TRACE</Property>
     </Properties>
     <Appenders>
         <Console name="console" target="SYSTEM_OUT">
@@ -52,62 +52,62 @@
     <Loggers>
         <!-- If adding a Logger with level set higher than warn, make category as selective as possible -->
         <!-- Loggers inherit appenders from Root Logger unless additivity is false -->
-        <AsyncLogger name="org.apereo" level="${sys:cas.log.level}" includeLocation="true"/>
-        <AsyncLogger name="org.apereo.services.persondir" level="${sys:cas.log.level}" includeLocation="true"/>
-        <AsyncLogger name="org.apereo.cas.web.flow" level="${sys:cas.log.level}" includeLocation="true"/>
-        <AsyncLogger name="org.apereo.spring" level="${sys:cas.log.level}" includeLocation="true"/>
+        <AsyncLogger name="org.apereo" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.apereo.services.persondir" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.apereo.cas.web.flow" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.apereo.spring" level="TRACE" includeLocation="true"/>
 
-        <AsyncLogger name="org.apache" level="warn" />
-        <AsyncLogger name="org.apache.http" level="error" />
+        <AsyncLogger name="org.apache" level="TRACE" />
+        <AsyncLogger name="org.apache.http" level="TRACE" />
 
-        <AsyncLogger name="org.springframework.boot" level="${sys:spring.boot.log.level" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.boot.context.embedded" level="info" includeLocation="true" />
+        <AsyncLogger name="org.springframework.boot" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.boot.context.embedded" level="TRACE" includeLocation="true" />
         <AsyncLogger name="org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration"
-        level="${sys:spring.security.log.level}" includeLocation="true" />
-        <AsyncLogger name="org.springframework.boot.autoconfigure.security" level="${sys:spring.security.log.level}" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.boot.devtools" level="off" includeLocation="true"/>
+        level="TRACE" includeLocation="true" />
+        <AsyncLogger name="org.springframework.boot.autoconfigure.security" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.boot.devtools" level="TRACE" includeLocation="true"/>
 
-        <AsyncLogger name="org.springframework" level="warn" includeLocation="true" />
-        <AsyncLogger name="org.springframework.webflow" level="${sys:spring.webflow.log.level}" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.aop" level="warn" includeLocation="true" />
-        <AsyncLogger name="org.springframework.web" level="warn" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.session" level="warn" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.scheduling" level="info" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.cloud.vault" level="warn" includeLocation="true" />
-        <AsyncLogger name="org.springframework.web.client" level="warn" includeLocation="true" />
-        <AsyncLogger name="org.springframework.security" level="${sys:spring.security.log.level}" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.cloud" level="${sys:spring.cloud.log.level}" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.amqp" level="error" />
-        <AsyncLogger name="org.springframework.integration" level="warn" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.messaging" level="warn" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.web" level="${sys:spring.web.log.level}" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.orm.jpa" level="warn" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.scheduling" level="warn" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.context.annotation" level="off" includeLocation="true"/>
-        <AsyncLogger name="org.springframework.web.socket" level="warn" includeLocation="true"/>
+        <AsyncLogger name="org.springframework" level="TRACE" includeLocation="true" />
+        <AsyncLogger name="org.springframework.webflow" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.aop" level="TRACE" includeLocation="true" />
+        <AsyncLogger name="org.springframework.web" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.session" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.scheduling" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.cloud.vault" level="TRACE" includeLocation="true" />
+        <AsyncLogger name="org.springframework.web.client" level="TRACE" includeLocation="true" />
+        <AsyncLogger name="org.springframework.security" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.cloud" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.amqp" level="TRACE" />
+        <AsyncLogger name="org.springframework.integration" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.messaging" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.web" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.orm.jpa" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.scheduling" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.context.annotation" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="org.springframework.web.socket" level="TRACE" includeLocation="true"/>
 
-        <AsyncLogger name="org.thymeleaf" level="warn" includeLocation="true"/>
+        <AsyncLogger name="org.thymeleaf" level="TRACE" includeLocation="true"/>
 
-        <AsyncLogger name="org.pac4j" level="${sys:pac4j.log.level}" includeLocation="true"/>
+        <AsyncLogger name="org.pac4j" level="TRACE" includeLocation="true"/>
 
-        <AsyncLogger name="org.opensaml" level="${sys:opensaml.log.level}" includeLocation="true"/>
-        <AsyncLogger name="PROTOCOL_MESSAGE" level="${sys:opensaml.log.level}" includeLocation="true" />
+        <AsyncLogger name="org.opensaml" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="PROTOCOL_MESSAGE" level="TRACE" includeLocation="true" />
 
-        <AsyncLogger name="net.sf.ehcache" level="warn" includeLocation="true"/>
-        <AsyncLogger name="com.couchbase" level="warn" includeLocation="true"/>
-        <AsyncLogger name="de.codecentric" level="${sys:spring.boot.admin.log.level}" includeLocation="true"/>
-        <AsyncLogger name="net.jradius" level="warn" includeLocation="true" />
-        <AsyncLogger name="org.openid4java" level="warn" includeLocation="true" />
-        <AsyncLogger name="org.ldaptive" level="${sys:ldap.log.level}" includeLocation="true"/>
-        <AsyncLogger name="com.hazelcast" level="${sys:hazelcast.log.level}" includeLocation="true"/>
+        <AsyncLogger name="net.sf.ehcache" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="com.couchbase" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="de.codecentric" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="net.jradius" level="TRACE" includeLocation="true" />
+        <AsyncLogger name="org.openid4java" level="TRACE" includeLocation="true" />
+        <AsyncLogger name="org.ldaptive" level="TRACE" includeLocation="true"/>
+        <AsyncLogger name="com.hazelcast" level="TRACE" includeLocation="true"/>
 
         <!-- Log audit to all root appenders, and also to audit log (additivity is not false) -->
-        <AsyncLogger name="org.apereo.inspektr.audit.support" level="info" includeLocation="true" >
+        <AsyncLogger name="org.apereo.inspektr.audit.support" level="TRACE" includeLocation="true" >
             <AppenderRef ref="casAudit"/>
         </AsyncLogger>
 
         <!-- All Loggers inherit appenders specified here, unless additivity="false" on the Logger -->
-        <AsyncRoot level="warn">
+        <AsyncRoot level="TRACE">
             <AppenderRef ref="casFile"/>
             <!-- 
                  For deployment to an application server running as service, 

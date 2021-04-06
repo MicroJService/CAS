@@ -119,3 +119,7 @@ idea {
         downloadSources = true
     }
 }
+
+test {
+    useJUnitPlatform()
+}

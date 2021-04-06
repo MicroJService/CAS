@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.microjservice.cas.CustomAuthenticationEventExecutionPlanConfiguration
+#org.apereo.cas.authentication.AuthenticationHandler=org.microjservice.cas.VarietyIdAuthenticationHandler
+#org.microjservice.test.TestContext

@@ -10,6 +10,6 @@ fi
 echo "Building CAS docker image tagged as [$imageTag]"
 # read -p "Press [Enter] to continue..." any_key;
 
-docker build --tag="apereo/cas:$imageTag" . \
+docker build --network=host --tag="apereo/cas:$imageTag" . \
   && echo "Built CAS image successfully tagged as apereo/cas:$imageTag" \
   && docker images "apereo/cas:$imageTag"
